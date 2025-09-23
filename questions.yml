@@ -1,0 +1,33 @@
+1.Service Container
+Laravel এ Service Container basically একটা Dependency Injection system। এটা object বানানো আর dependency resolve করার কাজ করে।
+যেমন, যদি কোনো controller এ অন্য একটা class দরকার হয়, সেটা container automatically resolve করে দেয় — আমাকে manually new করতে হয় না।"
+
+2.Service Provider
+Service Provider হচ্ছে class যেখানে আমরা আমাদের services/container bindings define করি।
+Laravel boot হওয়ার সময় Service Provider run হয় এবং container এ services register করে।"
+
+
+3.Dependency Injection
+Dependency Injection হলো class এর dependency (object) বাইরে থেকে inject করা। এতে কোড loosely coupled হয়। Laravel এর Service Container এটা handle করে।
+
+
+4.Repository Pattern
+Repository Pattern হলো design pattern যেখানে database logic আলাদা repository class এ রাখা হয়। Controller শুধু repository কে call করে। এতে separation of
+concerns, testability, এবং maintainability বাড়ে।
+
+5.Authentication মানে হলো ইউজারকে চেনা / verify করা। যেমন — User কে login করতে দেওয়া, তার email/password সঠিক কিনা সেটা চেক করা।
+
+
+=================================================================================
+Callback Function কী?
+
+Callback function হলো এমন একটি ফাংশন, যাকে অন্য একটি ফাংশনের আর্গুমেন্ট হিসেবে পাঠানো হয়, এবং পরে সেই ফাংশনের ভিতরে প্রয়োজনে কল করা হয়।
+
+Method Chaining কী?
+
+Method Chaining হলো একটি প্রযুক্তি যেখানে একের পর এক method কল করা হয় একই object এর উপর, এবং প্রতিটি method object নিজেই return করে,
+ফলে আমরা এক লাইনে একাধিক method ব্যবহার করতে পারি।
+
+
+static হলো একটা keyword, যেটা দিয়ে class property বা method এমনভাবে declare করা হয় যেন:
+object তৈরি না করেই class এর নাম ব্যবহার করে কল করা যায়।

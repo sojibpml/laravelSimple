@@ -1,0 +1,85 @@
+    'accepted_if' => 'The :attribute field must be accepted when :other is :value.',
+    'array' => 'The :attribute field must be an array.',
+    'between' => [
+        'array' => 'The :attribute field must have between :min and :max items.',
+        'file' => 'The :attribute field must be between :min and :max kilobytes.',
+        'numeric' => 'The :attribute field must be between :min and :max.',
+        'string' => 'The :attribute field must be between :min and :max characters.',
+    ],
+    'can' => 'The :attribute field contains an unauthorized value.',
+    'confirmed' => 'The :attribute field confirmation does not match.',
+    'current_password' => 'The password is incorrect.',
+    'date' => 'The :attribute field must be a valid date.',
+    'email' => 'The :attribute field must be a valid email address.',
+    'exists' => 'The selected :attribute is invalid.',
+    'extensions' => 'The :attribute field must have one of the following extensions: :values.',
+    'file' => 'The :attribute field must be a file.',
+    'filled' => 'The :attribute field must have a value.',
+    'image' => 'The :attribute field must be an image.',
+    'in' => 'The selected :attribute is invalid.',
+    'in_array' => 'The :attribute field must exist in :other.',
+    'in_array_keys' => 'The :attribute field must contain at least one of the following keys: :values.',
+    'integer' => 'The :attribute field must be an integer.',
+    'ip' => 'The :attribute field must be a valid IP address.',
+    'max' => [
+        'array' => 'The :attribute field must not have more than :max items.',
+        'file' => 'The :attribute field must not be greater than :max kilobytes.',
+        'numeric' => 'The :attribute field must not be greater than :max.',
+        'string' => 'The :attribute field must not be greater than :max characters.',
+    ],
+    'max_digits' => 'The :attribute field must not have more than :max digits.',
+    'mimes' => 'The :attribute field must be a file of type: :values.',
+    'mimetypes' => 'The :attribute field must be a file of type: :values.',
+    'min' => [
+        'array' => 'The :attribute field must have at least :min items.',
+        'file' => 'The :attribute field must be at least :min kilobytes.',
+        'numeric' => 'The :attribute field must be at least :min.',
+        'string' => 'The :attribute field must be at least :min characters.',
+    ],
+    'not_in' => 'The selected :attribute is invalid.',
+    'not_regex' => 'The :attribute field format is invalid.',
+    'numeric' => 'The :attribute field must be a number.',
+    'password' => [
+        'letters' => 'The :attribute field must contain at least one letter.',
+        'mixed' => 'The :attribute field must contain at least one uppercase and one lowercase letter.',
+        'numbers' => 'The :attribute field must contain at least one number.',
+        'symbols' => 'The :attribute field must contain at least one symbol.',
+        'uncompromised' => 'The given :attribute has appeared in a data leak. Please choose a different :attribute.',
+    ],
+    'regex' => 'The :attribute field format is invalid.',
+    'required' => 'The :attribute field is required.',
+    'required_if' => 'The :attribute field is required when :other is :value.',
+    'required_with' => 'The :attribute field is required when :values is present.',
+    'required_without' => 'The :attribute field is required when :values is not present.',
+    'same' => 'The :attribute field must match :other.',
+    'starts_with' => 'The :attribute field must start with one of the following: :values.',
+    'string' => 'The :attribute field must be a string.',
+    'timezone' => 'The :attribute field must be a valid timezone.',
+    'url' => 'The :attribute field must be a valid URL.',
+
+
+# new work
+1. Service Container & Service Provider    --ok
+2. Repository Pattern & Dependency Injection  --ok
+# 3. Queues & Jobs   
+# 4. Events & Listeners
+# 5. Task Scheduling
+6. Caching Strategies      --ok
+7. Authentication & Authorization (Advanced) --ok 
+8. API Development   --ok    headers 
+# 9. Testing
+10. Laravel Advanced Eloquent
+11. Multi-Tenancy
+# 12. Microservices with Laravel
+# 13. Real-Time Applications
+# 14. Package Development
+15. Performance Optimization  --ok 
+16.mail send  
+1.subject 2.from 3.to 4.message 5.attachment 
+----------------------------
+1.port 2.host 3.username 4.password,  5.vcc 6.cc
+# new work
+3,4,5,9,12,13,14
+
+
+
