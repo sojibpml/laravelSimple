@@ -33,4 +33,3 @@ Route::get('/assign-admin', [AuthController::class, 'assignAdminRole']);
 Route::get('/assign-roles/{id}', [AuthController::class, 'index'])->name('show.assign.roles');
 Route::get("/show", [AuthController::class, "showAdmin"]);
 
-
