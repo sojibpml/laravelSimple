@@ -46,60 +46,8 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
-
-    // public function roles()
-    // {
-    //     // return $this->hasOneThrough(
-    //     //     Role::class,       
-    //     //     UsersRole::class,   
-    //     //     'user_id',         
-    //     //     'id',               
-    //     //     'id',              
-    //     //     'role_id'           // Local key on pivot pointing to roles
-    //     // );
-
-    //     return $this->belongsToMany(Role::class, 'users_roles', 'user_id', 'role_id', 'id', 'id');
-    // }
-    // public function permissions()
-    // {
-    //     return $this->belongsToMany(Permission::class, 'users_permissions', 'user_id', 'permission_id', 'id', 'id');
-    // }
-
-    // new
-    public function roles()
+    public function posts()
     {
-        return $this->belongsToMany(Role::class, 'role_user');
-    }
-
-    public function hasRole($roleName)
-    {
-        return $this->roles->contains('name', $roleName);
-    }
-    public function isAdmin()
-    {
-        return $this->hasRole('admin');
-    }
-    public function isSuperAdmin()
-    {
-        return $this->hasRole('super Admin');
-    }
-
-    public function checkRole(string|array $roles)
-    {
-        $role = collect($this->roles)->whereIn("name", (array) $roles)->first();
-
-        if ($role)
-            return true;
-
-        return false;
-    }
-    // 
-    public function checkRoleOne(string|array $roles)
-    {
-        $role = collect($this->roles)->whereIn('name', (array) $roles)->first();
-        if ($role) {
-            return true;
-        }
-        return false;
+        return $this->hasMany(Post::class);
     }
 }

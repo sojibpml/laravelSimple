@@ -33,3 +33,47 @@ Route::get('/assign-admin', [AuthController::class, 'assignAdminRole']);
 Route::get('/assign-roles/{id}', [AuthController::class, 'index'])->name('show.assign.roles');
 Route::get("/show", [AuthController::class, "showAdmin"]);
 
+
+//এলকোয়েন্ট //.  Eloquent problem N + 1;
+use App\Models\User;
+Route::get('/n1', function () {
+    $users = User::all();
+    foreach ($users as $user) {
+        echo $user->name . "has" . $user->posts()->count() . "posts <br>";
+    }
+});
+
+
+Route::get('/n1-optimized', function () {
+    $users = User::with('posts')->get();
+
+    foreach ($users as $user) {
+        echo $user->name . "has" . $user->posts()->count() . "Posts <br>";
+    }
+});
+
+use App\Models\Comment;
+use App\Models\Photo;
+use App\Models\Video;
+use App\Models\Post;
+
+
+Route::get('/poly-add', function () {
+    $post = Post::create(['title' => 'First Post', 'body' => 'Post content', 'user_id' => 1]);
+    $video = Video::create(['title' => 'First video', 'url' => "http://example.com/video.mp4"]);
+    $photo = Photo::create(['title' => 'First photo', 'path' => 'photo.jpg']);
+
+    $post->comments()->create(['body' => 'nice post']);
+    $video->comments()->create(['body' => 'Awesome video!']);
+    $photo->comments()->create(['body' => 'Beautiful photo!']);
+    return "✅ Demo data added.";
+});
+
+Route::get('/poly-show', function () {
+    $comments = Comment::all();
+
+    foreach ($comments as $comment) {
+        echo "Comment : {$comment->body} <br>";
+        echo "On: " . class_basename($comment->commentable_type) . " (ID: {$comment->commentable_id})<br><br>";
+    }
+});
